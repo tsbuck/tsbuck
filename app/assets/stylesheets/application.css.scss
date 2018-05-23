@@ -74,3 +74,52 @@ h1, h2, h3 {
 .home-signup-links {
   margin-top: 30px;
 }
+
+//parallax
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+  color: white;
+  background: url(http://cliparts.co/cliparts/pT5/A7L/pT5A7L8T9.png) center no-repeat;
+  background-size: 50% auto;
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+  background: url(http://www.hdiphone6wallpapers.net/iphone-6-backgrounds/iphone-6-wallpapers-2/iphone-6-wallpapers-hd-100pb94q-1080x1920.jpg) no-repeat;
+}
+.parallax__layer--slow {
+  transform: translateZ(-4px) scale(4);
+  background: url(http://1.bp.blogspot.com/-ZRDN2sugdrg/UXa1qeFfjYI/AAAAAAAAVjo/1m10L-jCIgo/s1600/starcraft_2_render7E0.png) no-repeat center;
+  background-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  font-size: 16px;
+}
+
+.parallax__layer {
+  padding: 100vh 0;
+}
+
+.parallax::-webkit-scrollbar {
+    width: 0;
+}
